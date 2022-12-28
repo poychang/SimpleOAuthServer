@@ -22,7 +22,7 @@ public static class TokenEndpoint
             var value = subParts[1];
             if (key == "grant_type") grantType = value;
             else if (key == "code") code = value;
-            else if (key == "redirect_uri") codeVerifier = value;
+            else if (key == "redirect_uri") redirectUri = value;
             else if (key == "code_verifier") codeVerifier = value;
         }
         var protector = dataProtectionProvider.CreateProtector("oauth");
